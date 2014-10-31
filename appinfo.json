@@ -1,0 +1,28 @@
+{
+  "uuid": "6bfd98b7-a919-420b-87ef-302283b64307",
+  "shortName": "Tutorial",
+  "longName": "pebble-watchface-tutorial",
+  "companyName": "MakeAwesomeHappen",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "watchapp": {
+    "watchface": true
+  },
+  "appKeys": {
+    "dummy": 0
+  },
+  "resources": {
+    "media": [
+		{
+			"type":"png",
+			"name":"MAIN_WATCHFACE",
+			"file":"img/watchface.png"
+		},
+		{
+			"type":"font",
+			"name":"PLAY_FONT_REGULAR_40",
+			"file":"fonts/Play-Regular.ttf"
+		}
+	]
+  }
+}
