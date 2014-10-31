@@ -13,5 +13,6 @@ typedef enum {
   DEFAULT_MENU_ICON = 0, // Friendly synonym for use in `PBL_APP_INFO()` calls
   RESOURCE_ID_MAIN_WATCHFACE,
   RESOURCE_ID_PLAY_FONT_REGULAR_40,
+  RESOURCE_ID_FLIPBASH_CONDENSED_40,
 
 } ResourceId;

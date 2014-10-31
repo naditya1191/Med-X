@@ -1,7 +1,7 @@
 Archive member included because of file (symbol)
 
 /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                              src/pebble-watchface-tutorial.c.9.o (app_event_loop)
+                              src/pebble-watchface-tutorial.c.10.o (app_event_loop)
 
 Discarded input sections
 
@@ -17,10 +17,10 @@ Discarded input sections
  .jcr           0x0000000000000000        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .tm_clone_table
                 0x0000000000000000        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
- .text          0x0000000000000000        0x0 src/pebble-watchface-tutorial.c.9.o
- .bss           0x0000000000000000        0x0 src/pebble-watchface-tutorial.c.9.o
- .text          0x0000000000000000        0x0 appinfo.auto.c.9.o
- .bss           0x0000000000000000        0x0 appinfo.auto.c.9.o
+ .text          0x0000000000000000        0x0 src/pebble-watchface-tutorial.c.10.o
+ .bss           0x0000000000000000        0x0 src/pebble-watchface-tutorial.c.10.o
+ .text          0x0000000000000000        0x0 appinfo.auto.c.10.o
+ .bss           0x0000000000000000        0x0 appinfo.auto.c.10.o
  .bss           0x0000000000000000        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
  .text.accel_data_service_subscribe__deprecated
                 0x0000000000000000        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
@@ -662,8 +662,8 @@ Linker script and memory map
 
 LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
 LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-LOAD src/pebble-watchface-tutorial.c.9.o
-LOAD appinfo.auto.c.9.o
+LOAD src/pebble-watchface-tutorial.c.10.o
+LOAD appinfo.auto.c.10.o
 LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a
 START GROUP
 LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/libgcc.a
@@ -674,7 +674,7 @@ LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none
 
 .header         0x0000000000000000       0x82
  *(.pbl_header)
- .pbl_header    0x0000000000000000       0x82 appinfo.auto.c.9.o
+ .pbl_header    0x0000000000000000       0x82 appinfo.auto.c.10.o
                 0x0000000000000000                __pbl_app_info
 
 .text           0x0000000000000084      0x36c
@@ -682,15 +682,15 @@ LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none
  .text          0x0000000000000084       0x14 /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
  *(.text.*)
  .text.update_time
-                0x0000000000000098       0x60 src/pebble-watchface-tutorial.c.9.o
+                0x0000000000000098       0x60 src/pebble-watchface-tutorial.c.10.o
  .text.tick_handler
-                0x00000000000000f8        0x4 src/pebble-watchface-tutorial.c.9.o
+                0x00000000000000f8        0x4 src/pebble-watchface-tutorial.c.10.o
  .text.main_window_unload
-                0x00000000000000fc       0x40 src/pebble-watchface-tutorial.c.9.o
+                0x00000000000000fc       0x40 src/pebble-watchface-tutorial.c.10.o
  .text.main_window_load
-                0x000000000000013c       0xc8 src/pebble-watchface-tutorial.c.9.o
+                0x000000000000013c       0xc8 src/pebble-watchface-tutorial.c.10.o
  .text.startup.main
-                0x0000000000000204       0x68 src/pebble-watchface-tutorial.c.9.o
+                0x0000000000000204       0x68 src/pebble-watchface-tutorial.c.10.o
                 0x0000000000000204                main
  .text.app_event_loop
                 0x000000000000026c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
@@ -781,10 +781,10 @@ LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none
                 0x00000000000003c8        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
                 0x00000000000003c8                window_stack_push
  *(.rodata)
- .rodata        0x00000000000003d4       0x10 src/pebble-watchface-tutorial.c.9.o
+ .rodata        0x00000000000003d4       0x10 src/pebble-watchface-tutorial.c.10.o
  *(.rodata*)
  .rodata.str1.1
-                0x00000000000003e4        0xc src/pebble-watchface-tutorial.c.9.o
+                0x00000000000003e4        0xc src/pebble-watchface-tutorial.c.10.o
 
 .glue_7         0x00000000000003f0        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
@@ -809,14 +809,14 @@ LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none
  .data          0x00000000000003f0        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
  .data          0x00000000000003f0        0x4 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
                 0x00000000000003f0                __dso_handle
- .data          0x00000000000003f4        0x0 src/pebble-watchface-tutorial.c.9.o
- .data          0x00000000000003f4        0x0 appinfo.auto.c.9.o
+ .data          0x00000000000003f4        0x0 src/pebble-watchface-tutorial.c.10.o
+ .data          0x00000000000003f4        0x0 appinfo.auto.c.10.o
  .data          0x00000000000003f4        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
  .data          0x00000000000003f4        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
  .data          0x00000000000003f4        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
- .data.buffer.6621
-                0x00000000000003f4        0x6 src/pebble-watchface-tutorial.c.9.o
+ .data.buffer.6622
+                0x00000000000003f4        0x6 src/pebble-watchface-tutorial.c.10.o
 
 .igot.plt       0x00000000000003fc        0x0
  .igot.plt      0x0000000000000000        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
@@ -825,15 +825,15 @@ LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none
  *(.bss)
  *(.bss.*)
  .bss.s_background_layer
-                0x00000000000003fc        0x4 src/pebble-watchface-tutorial.c.9.o
+                0x00000000000003fc        0x4 src/pebble-watchface-tutorial.c.10.o
  .bss.s_time_layer
-                0x0000000000000400        0x4 src/pebble-watchface-tutorial.c.9.o
+                0x0000000000000400        0x4 src/pebble-watchface-tutorial.c.10.o
  .bss.s_background_bitmap
-                0x0000000000000404        0x4 src/pebble-watchface-tutorial.c.9.o
+                0x0000000000000404        0x4 src/pebble-watchface-tutorial.c.10.o
  .bss.s_main_window
-                0x0000000000000408        0x4 src/pebble-watchface-tutorial.c.9.o
+                0x0000000000000408        0x4 src/pebble-watchface-tutorial.c.10.o
  .bss.s_time_font
-                0x000000000000040c        0x4 src/pebble-watchface-tutorial.c.9.o
+                0x000000000000040c        0x4 src/pebble-watchface-tutorial.c.10.o
 
 DISCARD
  libc.a(*)
@@ -849,9 +849,9 @@ OUTPUT(/Users/gdanda/Sites/pebble-watchface-tutorial/build/pebble-app.elf elf32-
  .ARM.attributes
                 0x0000000000000019       0x29 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
  .ARM.attributes
-                0x0000000000000042       0x33 src/pebble-watchface-tutorial.c.9.o
+                0x0000000000000042       0x33 src/pebble-watchface-tutorial.c.10.o
  .ARM.attributes
-                0x0000000000000075       0x33 appinfo.auto.c.9.o
+                0x0000000000000075       0x33 appinfo.auto.c.10.o
  .ARM.attributes
                 0x00000000000000a8       0x21 /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
  .ARM.attributes
@@ -862,39 +862,39 @@ OUTPUT(/Users/gdanda/Sites/pebble-watchface-tutorial/build/pebble-app.elf elf32-
 .comment        0x0000000000000000       0x4e
  .comment       0x0000000000000000       0x4e /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
                                          0x4f (size before relaxing)
- .comment       0x0000000000000000       0x4f src/pebble-watchface-tutorial.c.9.o
- .comment       0x0000000000000000       0x4f appinfo.auto.c.9.o
+ .comment       0x0000000000000000       0x4f src/pebble-watchface-tutorial.c.10.o
+ .comment       0x0000000000000000       0x4f appinfo.auto.c.10.o
  .comment       0x0000000000000000       0x4f /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000      0xe5e
- .debug_info    0x0000000000000000      0xb23 src/pebble-watchface-tutorial.c.9.o
- .debug_info    0x0000000000000b23      0x33b appinfo.auto.c.9.o
+.debug_info     0x0000000000000000      0xe6a
+ .debug_info    0x0000000000000000      0xb29 src/pebble-watchface-tutorial.c.10.o
+ .debug_info    0x0000000000000b29      0x341 appinfo.auto.c.10.o
 
 .debug_abbrev   0x0000000000000000      0x34d
- .debug_abbrev  0x0000000000000000      0x2af src/pebble-watchface-tutorial.c.9.o
- .debug_abbrev  0x00000000000002af       0x9e appinfo.auto.c.9.o
+ .debug_abbrev  0x0000000000000000      0x2af src/pebble-watchface-tutorial.c.10.o
+ .debug_abbrev  0x00000000000002af       0x9e appinfo.auto.c.10.o
 
 .debug_loc      0x0000000000000000      0x139
- .debug_loc     0x0000000000000000      0x139 src/pebble-watchface-tutorial.c.9.o
+ .debug_loc     0x0000000000000000      0x139 src/pebble-watchface-tutorial.c.10.o
 
 .debug_aranges  0x0000000000000000       0x58
  .debug_aranges
-                0x0000000000000000       0x40 src/pebble-watchface-tutorial.c.9.o
+                0x0000000000000000       0x40 src/pebble-watchface-tutorial.c.10.o
  .debug_aranges
-                0x0000000000000040       0x18 appinfo.auto.c.9.o
+                0x0000000000000040       0x18 appinfo.auto.c.10.o
 
 .debug_ranges   0x0000000000000000       0x30
- .debug_ranges  0x0000000000000000       0x30 src/pebble-watchface-tutorial.c.9.o
+ .debug_ranges  0x0000000000000000       0x30 src/pebble-watchface-tutorial.c.10.o
 
 .debug_line     0x0000000000000000      0x3f3
- .debug_line    0x0000000000000000      0x2d5 src/pebble-watchface-tutorial.c.9.o
- .debug_line    0x00000000000002d5      0x11e appinfo.auto.c.9.o
+ .debug_line    0x0000000000000000      0x2d5 src/pebble-watchface-tutorial.c.10.o
+ .debug_line    0x00000000000002d5      0x11e appinfo.auto.c.10.o
 
-.debug_str      0x0000000000000000      0x834
- .debug_str     0x0000000000000000      0x628 src/pebble-watchface-tutorial.c.9.o
-                                        0x6a5 (size before relaxing)
- .debug_str     0x0000000000000628      0x20c appinfo.auto.c.9.o
-                                        0x363 (size before relaxing)
+.debug_str      0x0000000000000000      0x856
+ .debug_str     0x0000000000000000      0x64a src/pebble-watchface-tutorial.c.10.o
+                                        0x6c7 (size before relaxing)
+ .debug_str     0x000000000000064a      0x20c appinfo.auto.c.10.o
+                                        0x385 (size before relaxing)
 
 .debug_frame    0x0000000000000000       0x9c
- .debug_frame   0x0000000000000000       0x9c src/pebble-watchface-tutorial.c.9.o
+ .debug_frame   0x0000000000000000       0x9c src/pebble-watchface-tutorial.c.10.o

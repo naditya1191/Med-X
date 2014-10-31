@@ -22,6 +22,11 @@
 			"type":"font",
 			"name":"PLAY_FONT_REGULAR_40",
 			"file":"fonts/Play-Regular.ttf"
+		},
+		{
+			"type":"font",
+			"name":"FLIPBASH_CONDENSED_40",
+			"file":"fonts/Flipbash-Condensed.ttf"
 		}
 	]
   }
