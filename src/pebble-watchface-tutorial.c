@@ -14,6 +14,7 @@ static void update_time() {
 
   // Create a long-lived buffer
   static char buffer[] = "00:00";
+  static char date_buffer[] = "00.00";
 
   // Write the current hours and minutes into the buffer
   if(clock_is_24h_style() == true) {
@@ -24,8 +25,13 @@ static void update_time() {
     strftime(buffer, sizeof("00:00"), "%I:%M", tick_time);
   }
 
-  // Display this time on the TextLayer
+  // Write the current date into the date buffer
+  strftime(date_buffer, sizeof("00.00"), "%m.%d", tick_time);
+
+
+  // Display this time and date on the TextLayer
   text_layer_set_text(s_time_layer, buffer);
+  text_layer_set_text(s_date_layer, date_buffer);
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
@@ -74,6 +80,7 @@ static void main_window_load(Window *window) {
 static void main_window_unload(Window *window) {
     // Destroy TextLayer
     text_layer_destroy(s_time_layer);
+	text_layer_destroy(s_date_layer);
   
     // Unload GFont
     fonts_unload_custom_font(s_time_font);

@@ -677,167 +677,169 @@ LOAD /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none
  .pbl_header    0x0000000000000000       0x82 appinfo.auto.c.11.o
                 0x0000000000000000                __pbl_app_info
 
-.text           0x0000000000000084      0x3f6
+.text           0x0000000000000084      0x434
  *(.text)
  .text          0x0000000000000084       0x14 /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
  *(.text.*)
  .text.update_time
-                0x0000000000000098       0x60 src/pebble-watchface-tutorial.c.11.o
+                0x0000000000000098       0x8c src/pebble-watchface-tutorial.c.11.o
  .text.tick_handler
-                0x00000000000000f8        0x4 src/pebble-watchface-tutorial.c.11.o
+                0x0000000000000124        0x4 src/pebble-watchface-tutorial.c.11.o
  .text.main_window_unload
-                0x00000000000000fc       0x40 src/pebble-watchface-tutorial.c.11.o
+                0x0000000000000128       0x4c src/pebble-watchface-tutorial.c.11.o
  .text.main_window_load
-                0x000000000000013c      0x144 src/pebble-watchface-tutorial.c.11.o
+                0x0000000000000174      0x144 src/pebble-watchface-tutorial.c.11.o
  .text.startup.main
-                0x0000000000000280       0x68 src/pebble-watchface-tutorial.c.11.o
-                0x0000000000000280                main
+                0x00000000000002b8       0x68 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000002b8                main
  .text.app_event_loop
-                0x00000000000002e8        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000002e8                app_event_loop
+                0x0000000000000320        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000320                app_event_loop
  .text.bitmap_layer_create
-                0x00000000000002f4        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000002f4                bitmap_layer_create
+                0x000000000000032c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x000000000000032c                bitmap_layer_create
  .text.bitmap_layer_destroy
-                0x0000000000000300        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000300                bitmap_layer_destroy
+                0x0000000000000338        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000338                bitmap_layer_destroy
  .text.bitmap_layer_get_layer
-                0x000000000000030c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x000000000000030c                bitmap_layer_get_layer
+                0x0000000000000344        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000344                bitmap_layer_get_layer
  .text.bitmap_layer_set_bitmap
-                0x0000000000000318        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000318                bitmap_layer_set_bitmap
+                0x0000000000000350        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000350                bitmap_layer_set_bitmap
  .text.clock_is_24h_style
-                0x0000000000000324        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000324                clock_is_24h_style
+                0x000000000000035c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x000000000000035c                clock_is_24h_style
  .text.fonts_load_custom_font
-                0x0000000000000330        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000330                fonts_load_custom_font
+                0x0000000000000368        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000368                fonts_load_custom_font
  .text.fonts_unload_custom_font
-                0x000000000000033c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x000000000000033c                fonts_unload_custom_font
+                0x0000000000000374        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000374                fonts_unload_custom_font
  .text.gbitmap_create_with_resource
-                0x0000000000000348        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000348                gbitmap_create_with_resource
+                0x0000000000000380        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000380                gbitmap_create_with_resource
  .text.gbitmap_destroy
-                0x0000000000000354        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000354                gbitmap_destroy
+                0x000000000000038c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x000000000000038c                gbitmap_destroy
  .text.layer_add_child
-                0x0000000000000360        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000360                layer_add_child
+                0x0000000000000398        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000398                layer_add_child
  .text.localtime
-                0x000000000000036c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x000000000000036c                localtime
- .text.memset   0x0000000000000378        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000378                memset
+                0x00000000000003a4        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x00000000000003a4                localtime
+ .text.memset   0x00000000000003b0        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x00000000000003b0                memset
  .text.resource_get_handle
-                0x0000000000000384        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000384                resource_get_handle
+                0x00000000000003bc        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x00000000000003bc                resource_get_handle
  .text.strftime
-                0x0000000000000390        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000390                strftime
+                0x00000000000003c8        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x00000000000003c8                strftime
  .text.text_layer_create
-                0x000000000000039c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x000000000000039c                text_layer_create
+                0x00000000000003d4        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x00000000000003d4                text_layer_create
  .text.text_layer_destroy
-                0x00000000000003a8        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000003a8                text_layer_destroy
+                0x00000000000003e0        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x00000000000003e0                text_layer_destroy
  .text.text_layer_get_layer
-                0x00000000000003b4        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000003b4                text_layer_get_layer
+                0x00000000000003ec        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x00000000000003ec                text_layer_get_layer
  .text.text_layer_set_background_color
-                0x00000000000003c0        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000003c0                text_layer_set_background_color
+                0x00000000000003f8        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x00000000000003f8                text_layer_set_background_color
  .text.text_layer_set_font
-                0x00000000000003cc        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000003cc                text_layer_set_font
+                0x0000000000000404        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000404                text_layer_set_font
  .text.text_layer_set_text
-                0x00000000000003d8        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000003d8                text_layer_set_text
+                0x0000000000000410        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000410                text_layer_set_text
  .text.text_layer_set_text_alignment
-                0x00000000000003e4        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000003e4                text_layer_set_text_alignment
+                0x000000000000041c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x000000000000041c                text_layer_set_text_alignment
  .text.text_layer_set_text_color
-                0x00000000000003f0        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000003f0                text_layer_set_text_color
+                0x0000000000000428        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000428                text_layer_set_text_color
  .text.tick_timer_service_subscribe
-                0x00000000000003fc        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x00000000000003fc                tick_timer_service_subscribe
- .text.time     0x0000000000000408        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000408                time
+                0x0000000000000434        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000434                tick_timer_service_subscribe
+ .text.time     0x0000000000000440        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000440                time
  .text.window_create
-                0x0000000000000414        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000414                window_create
+                0x000000000000044c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x000000000000044c                window_create
  .text.window_destroy
-                0x0000000000000420        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000420                window_destroy
+                0x0000000000000458        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000458                window_destroy
  .text.window_get_root_layer
-                0x000000000000042c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x000000000000042c                window_get_root_layer
+                0x0000000000000464        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000464                window_get_root_layer
  .text.window_set_window_handlers
-                0x0000000000000438        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000438                window_set_window_handlers
+                0x0000000000000470        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x0000000000000470                window_set_window_handlers
  .text.window_stack_push
-                0x0000000000000444        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
-                0x0000000000000444                window_stack_push
+                0x000000000000047c        0xc /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+                0x000000000000047c                window_stack_push
  *(.rodata)
- .rodata        0x0000000000000450       0x18 src/pebble-watchface-tutorial.c.11.o
+ .rodata        0x0000000000000488       0x18 src/pebble-watchface-tutorial.c.11.o
  *(.rodata*)
  .rodata.str1.1
-                0x0000000000000468       0x12 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004a0       0x18 src/pebble-watchface-tutorial.c.11.o
 
-.glue_7         0x000000000000047c        0x0
+.glue_7         0x00000000000004b8        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x000000000000047c        0x0
+.glue_7t        0x00000000000004b8        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x000000000000047c        0x0
+.vfp11_veneer   0x00000000000004b8        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x000000000000047c        0x0
+.v4_bx          0x00000000000004b8        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x000000000000047c        0x0
+.iplt           0x00000000000004b8        0x0
  .iplt          0x0000000000000000        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.rel.dyn        0x000000000000047c        0x0
+.rel.dyn        0x00000000000004b8        0x0
  .rel.iplt      0x0000000000000000        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.data           0x000000000000047c        0xa
+.data           0x00000000000004b8       0x10
  *(.data)
- .data          0x000000000000047c        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
- .data          0x000000000000047c        0x4 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
-                0x000000000000047c                __dso_handle
- .data          0x0000000000000480        0x0 src/pebble-watchface-tutorial.c.11.o
- .data          0x0000000000000480        0x0 appinfo.auto.c.11.o
- .data          0x0000000000000480        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
- .data          0x0000000000000480        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
- .data          0x0000000000000480        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
+ .data          0x00000000000004b8        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crti.o
+ .data          0x00000000000004b8        0x4 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
+                0x00000000000004b8                __dso_handle
+ .data          0x00000000000004bc        0x0 src/pebble-watchface-tutorial.c.11.o
+ .data          0x00000000000004bc        0x0 appinfo.auto.c.11.o
+ .data          0x00000000000004bc        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/Pebble/lib/libpebble.a(tmpu_Elzfpebble.o)
+ .data          0x00000000000004bc        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
+ .data          0x00000000000004bc        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtn.o
  *(.data.*)
  .data.buffer.6625
-                0x0000000000000480        0x6 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004bc        0x6 src/pebble-watchface-tutorial.c.11.o
+ .data.date_buffer.6626
+                0x00000000000004c2        0x6 src/pebble-watchface-tutorial.c.11.o
 
-.igot.plt       0x0000000000000488        0x0
+.igot.plt       0x00000000000004c8        0x0
  .igot.plt      0x0000000000000000        0x0 /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtbegin.o
 
-.bss            0x0000000000000488       0x1c
+.bss            0x00000000000004c8       0x1c
  *(.bss)
  *(.bss.*)
  .bss.s_date_layer
-                0x0000000000000488        0x4 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004c8        0x4 src/pebble-watchface-tutorial.c.11.o
  .bss.s_background_layer
-                0x000000000000048c        0x4 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004cc        0x4 src/pebble-watchface-tutorial.c.11.o
  .bss.s_date_font
-                0x0000000000000490        0x4 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004d0        0x4 src/pebble-watchface-tutorial.c.11.o
  .bss.s_time_layer
-                0x0000000000000494        0x4 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004d4        0x4 src/pebble-watchface-tutorial.c.11.o
  .bss.s_background_bitmap
-                0x0000000000000498        0x4 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004d8        0x4 src/pebble-watchface-tutorial.c.11.o
  .bss.s_main_window
-                0x000000000000049c        0x4 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004dc        0x4 src/pebble-watchface-tutorial.c.11.o
  .bss.s_time_font
-                0x00000000000004a0        0x4 src/pebble-watchface-tutorial.c.11.o
+                0x00000000000004e0        0x4 src/pebble-watchface-tutorial.c.11.o
 
 DISCARD
  libc.a(*)
@@ -870,9 +872,9 @@ OUTPUT(/Users/gdanda/Sites/pebble-watchface-tutorial/build/pebble-app.elf elf32-
  .comment       0x0000000000000000       0x4f appinfo.auto.c.11.o
  .comment       0x0000000000000000       0x4f /Users/gdanda/pebble-dev/PebbleSDK-2.7/arm-cs-tools/bin/../lib/gcc/arm-none-eabi/4.7.2/thumb2/crtend.o
 
-.debug_info     0x0000000000000000      0xf3a
- .debug_info    0x0000000000000000      0xbf3 src/pebble-watchface-tutorial.c.11.o
- .debug_info    0x0000000000000bf3      0x347 appinfo.auto.c.11.o
+.debug_info     0x0000000000000000      0xf83
+ .debug_info    0x0000000000000000      0xc3c src/pebble-watchface-tutorial.c.11.o
+ .debug_info    0x0000000000000c3c      0x347 appinfo.auto.c.11.o
 
 .debug_abbrev   0x0000000000000000      0x34d
  .debug_abbrev  0x0000000000000000      0x2af src/pebble-watchface-tutorial.c.11.o
@@ -890,15 +892,15 @@ OUTPUT(/Users/gdanda/Sites/pebble-watchface-tutorial/build/pebble-app.elf elf32-
 .debug_ranges   0x0000000000000000       0x30
  .debug_ranges  0x0000000000000000       0x30 src/pebble-watchface-tutorial.c.11.o
 
-.debug_line     0x0000000000000000      0x403
- .debug_line    0x0000000000000000      0x2e5 src/pebble-watchface-tutorial.c.11.o
- .debug_line    0x00000000000002e5      0x11e appinfo.auto.c.11.o
+.debug_line     0x0000000000000000      0x408
+ .debug_line    0x0000000000000000      0x2ea src/pebble-watchface-tutorial.c.11.o
+ .debug_line    0x00000000000002ea      0x11e appinfo.auto.c.11.o
 
-.debug_str      0x0000000000000000      0x88d
- .debug_str     0x0000000000000000      0x681 src/pebble-watchface-tutorial.c.11.o
-                                        0x6fe (size before relaxing)
- .debug_str     0x0000000000000681      0x20c appinfo.auto.c.11.o
+.debug_str      0x0000000000000000      0x892
+ .debug_str     0x0000000000000000      0x686 src/pebble-watchface-tutorial.c.11.o
+                                        0x70a (size before relaxing)
+ .debug_str     0x0000000000000686      0x20c appinfo.auto.c.11.o
                                         0x3a3 (size before relaxing)
 
-.debug_frame    0x0000000000000000       0x98
- .debug_frame   0x0000000000000000       0x98 src/pebble-watchface-tutorial.c.11.o
+.debug_frame    0x0000000000000000       0x9c
+ .debug_frame   0x0000000000000000       0x9c src/pebble-watchface-tutorial.c.11.o
