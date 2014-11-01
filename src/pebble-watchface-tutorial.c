@@ -1,7 +1,9 @@
 #include <pebble.h>
 static Window *s_main_window;
 static TextLayer *s_time_layer;
+static TextLayer *s_date_layer;
 static GFont s_time_font;
+static GFont s_date_font;
 static BitmapLayer *s_background_layer;
 static GBitmap *s_background_bitmap;
 
@@ -32,7 +34,8 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 
 static void main_window_load(Window *window) {
   // Create new font
-  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_PLAY_FONT_REGULAR_40));
+  s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_PLAY_FONT_REGULAR_35));
+  s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_PLAY_FONT_BOLD_20));
 
   // Create GBitmap, then set to created BitmapLayer
   s_background_bitmap = gbitmap_create_with_resource(RESOURCE_ID_MAIN_WATCHFACE);
@@ -47,14 +50,23 @@ static void main_window_load(Window *window) {
   text_layer_set_text_color(s_time_layer, GColorWhite);
   // Apply to TextLayer
   text_layer_set_font(s_time_layer, s_time_font);
-
-  // Improve the layout to be more like a watchface
-  //text_layer_set_font(s_time_layer, fonts_get_system_font(FONT_KEY_BITHAM_42_BOLD));
   text_layer_set_text_alignment(s_time_layer, GTextAlignmentCenter);
-
   // Add it as a child layer to the Window's root layer
   layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_time_layer));
+
+
+  // Create date TextLayer
+  s_date_layer = text_layer_create(GRect(0, 142, 144, 26));
+  text_layer_set_background_color(s_date_layer, GColorClear);
+  text_layer_set_text_color(s_date_layer, GColorWhite);
+  text_layer_set_text(s_date_layer,"10.31");
+  // Apply to TextLayer
+  text_layer_set_font(s_date_layer, s_date_font);
+  text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
+
   
+  layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_date_layer));
+
   // Make sure the time is displayed from the start
   update_time();
 }
@@ -96,7 +108,12 @@ static void deinit() {
 }
 
 int main(void) {
+  // Initialize main Window
   init();
+
+  // Start event loop
   app_event_loop();
+
+  // Deinit main Window
   deinit();
 }

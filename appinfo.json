@@ -20,8 +20,13 @@
 		},
 		{
 			"type":"font",
-			"name":"PLAY_FONT_REGULAR_40",
+			"name":"PLAY_FONT_REGULAR_35",
 			"file":"fonts/Play-Regular.ttf"
+		},
+		{
+			"type":"font",
+			"name":"PLAY_FONT_BOLD_20",
+			"file":"fonts/Play-Bold.ttf"
 		},
 		{
 			"type":"font",
