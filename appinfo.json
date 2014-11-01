@@ -1,8 +1,8 @@
 {
   "uuid": "6bfd98b7-a919-420b-87ef-302283b64307",
-  "shortName": "Tutorial",
-  "longName": "pebble-watchface-tutorial",
-  "companyName": "MakeAwesomeHappen",
+  "shortName": "Demo",
+  "longName": "Pebble Demo Watchface",
+  "companyName": "Gopinath Danda",
   "versionCode": 1,
   "versionLabel": "1.0",
   "watchapp": {
