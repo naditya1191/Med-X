@@ -59,7 +59,7 @@ static void main_window_load(Window *window) {
   
   
   // Create time TextLayer
-  s_time_layer = text_layer_create(GRect(0, 57, 144, 50));
+  s_time_layer = text_layer_create(GRect(0, 60, 144, 50));
   text_layer_set_background_color(s_time_layer, GColorClear);
   text_layer_set_text_color(s_time_layer, GColorWhite);
   // Apply to TextLayer
