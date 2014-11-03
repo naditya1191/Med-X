@@ -34,9 +34,9 @@
 			"file":"fonts/Play-Bold.ttf"
 		},
 		{
-			"type":"font",
-			"name":"FLIPBASH_CONDENSED_40",
-			"file":"fonts/Flipbash-Condensed.ttf"
+			"type":"png",
+			"name":"SECONDS_DIAL",
+			"file":"img/seconds.png"
 		}
 	]
   }

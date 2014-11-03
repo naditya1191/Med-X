@@ -7,7 +7,10 @@ static GFont s_time_font;
 static GFont s_date_font;
 static GFont s_day_font;
 static BitmapLayer *s_background_layer;
+static RotBitmapLayer *s_seconds_layer;
 static GBitmap *s_background_bitmap;
+static GBitmap *s_seconds_bitmap;
+static GPoint center = { 72, 84 };
 
 static void update_time() {
   // Get a tm structure
@@ -56,6 +59,26 @@ static void main_window_load(Window *window) {
   s_background_layer = bitmap_layer_create(GRect(0, 0, 144, 168));
   bitmap_layer_set_bitmap(s_background_layer, s_background_bitmap);
   layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_background_layer));
+
+  
+  // Create GBitmap, then set to created RotBitmapLayer
+GRect r;
+int32_t sec_angle = 0;
+
+
+  s_seconds_bitmap = gbitmap_create_with_resource(RESOURCE_ID_SECONDS_DIAL);
+  s_seconds_layer = rot_bitmap_layer_create(s_seconds_bitmap);
+//r = layer_get_frame((Layer *)s_seconds_layer);
+r.origin.x = -37;
+r.origin.y = -26;
+r.size.w = 144;
+r.size.h = 168;
+
+layer_set_frame((Layer *)s_seconds_layer, r);
+//rot_bitmap_layer_set_angle(s_seconds_layer, sec_angle);
+  rot_bitmap_set_compositing_mode(s_seconds_layer, GCompOpOr);
+  rot_bitmap_set_src_ic(s_seconds_layer, center);
+  layer_add_child(window_get_root_layer(window), (Layer*)s_seconds_layer);
   
   
   // Create time TextLayer
@@ -104,11 +127,14 @@ static void main_window_unload(Window *window) {
     // Unload GFont
     fonts_unload_custom_font(s_time_font);
     
-    // Destroy GBitmap
+    // Destroy GBitmap and BitmapLayer
     gbitmap_destroy(s_background_bitmap);
-    
-    // Destroy BitmapLayer
     bitmap_layer_destroy(s_background_layer);
+    
+    // Destroy GBitmap and RotBitmapLayer
+    gbitmap_destroy(s_seconds_bitmap);
+    rot_bitmap_layer_destroy(s_seconds_layer);
+    
 }
 
 static void init() {
