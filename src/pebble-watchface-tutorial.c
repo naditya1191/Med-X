@@ -72,7 +72,7 @@ static void update_battery(BatteryChargeState charge){
 	
 	// Battery charge
 	// 100% = 0 deg = 0; 0% = 123 deg = 0.34
-	bat_angle = TRIG_MAX_ANGLE * (100-charge.charge_percent) * 0.34 / 100 ;
+	bat_angle = TRIG_MAX_ANGLE * (charge.charge_percent-100) * 0.34 / 100 ;
 	GRect rp;
 	rp = layer_get_frame((Layer *)s_battery_mask_layer);
 	rp.origin.x = 72 - rp.size.w/2;
