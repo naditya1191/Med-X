@@ -2,6 +2,7 @@ Demo Pebble Watchface
 =========================
 My first basic Pebble watchface to just try out the different features available. Based on J.A.R.V.I.S. interface.
 
+<img src="pebble-screenshot_2014-11-04_02-35-34.png" width=120 />
 
 <h2>Installation</h2>
 
