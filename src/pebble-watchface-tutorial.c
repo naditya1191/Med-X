@@ -11,6 +11,7 @@ static RotBitmapLayer *s_seconds_layer;
 static GBitmap *s_background_bitmap;
 static GBitmap *s_seconds_bitmap;
 static GPoint center = { 72, 84 };
+static int32_t sec_angle;
 
 static void update_time() {
   // Get a tm structure
@@ -37,11 +38,23 @@ static void update_time() {
   // Write the current day into the day buffer
   strftime(day_buffer, sizeof("Thu"), "%a", tick_time);
 
+  // Get second angle
+  sec_angle = TRIG_MAX_ANGLE * tick_time->tm_sec / 60;
 
   // Display this time and date on the TextLayer
   text_layer_set_text(s_time_layer, buffer);
   text_layer_set_text(s_date_layer, date_buffer);
   text_layer_set_text(s_day_layer, day_buffer);
+
+  // Seconds layer
+  GRect r;
+  r = layer_get_frame((Layer *)s_seconds_layer);
+  r.origin.x = 72 - r.size.w/2;
+  r.origin.y = 84 - r.size.h/2;
+  layer_set_frame((Layer *)s_seconds_layer, r);
+  rot_bitmap_layer_set_angle(s_seconds_layer, sec_angle);
+  rot_bitmap_set_compositing_mode(s_seconds_layer, GCompOpOr);
+  rot_bitmap_set_src_ic(s_seconds_layer, center);
 }
 
 static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
@@ -62,22 +75,8 @@ static void main_window_load(Window *window) {
 
   
   // Create GBitmap, then set to created RotBitmapLayer
-GRect r;
-int32_t sec_angle = 0;
-
-
   s_seconds_bitmap = gbitmap_create_with_resource(RESOURCE_ID_SECONDS_DIAL);
   s_seconds_layer = rot_bitmap_layer_create(s_seconds_bitmap);
-//r = layer_get_frame((Layer *)s_seconds_layer);
-r.origin.x = -37;
-r.origin.y = -26;
-r.size.w = 144;
-r.size.h = 168;
-
-layer_set_frame((Layer *)s_seconds_layer, r);
-//rot_bitmap_layer_set_angle(s_seconds_layer, sec_angle);
-  rot_bitmap_set_compositing_mode(s_seconds_layer, GCompOpOr);
-  rot_bitmap_set_src_ic(s_seconds_layer, center);
   layer_add_child(window_get_root_layer(window), (Layer*)s_seconds_layer);
   
   
@@ -93,10 +92,14 @@ layer_set_frame((Layer *)s_seconds_layer, r);
 
 
   // Create date TextLayer
-  s_date_layer = text_layer_create(GRect(0, 142, 144, 26));
+  s_date_layer = text_layer_create(GRect(0, 144, 144, 26));
   text_layer_set_background_color(s_date_layer, GColorClear);
   text_layer_set_text_color(s_date_layer, GColorWhite);
-  //text_layer_set_text(s_date_layer,"10.31");
+  // Show values
+  // static char rbuff[0x100];
+  // r = layer_get_frame((Layer *)s_seconds_layer);
+  // snprintf(rbuff, sizeof(rbuff), "%d,%d,%d", r.origin.y,r.size.w,r.size.h);
+  //text_layer_set_text(s_date_layer,rbuff);
   // Apply to TextLayer
   text_layer_set_font(s_date_layer, s_date_font);
   text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
@@ -151,7 +154,7 @@ static void init() {
   window_stack_push(s_main_window, true);
   
   // Register with TickTimerService
-  tick_timer_service_subscribe(MINUTE_UNIT, tick_handler);
+  tick_timer_service_subscribe(SECOND_UNIT, tick_handler);
 }
 
 static void deinit() {
