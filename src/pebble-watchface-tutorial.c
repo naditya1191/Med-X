@@ -6,11 +6,13 @@ static TextLayer *s_day_layer;
 static GFont s_time_font;
 static GFont s_date_font;
 static GFont s_day_font;
+static GFont s_charged_font;
 static BitmapLayer *s_battery_layer;
 static RotBitmapLayer *s_battery_mask_layer;
 static BitmapLayer *s_bottom_layer;
 static RotBitmapLayer *s_seconds_layer;
 static BitmapLayer *s_charging_layer;
+static TextLayer *s_charged_layer;
 static GBitmap *s_battery_bitmap;
 static GBitmap *s_battery_mask_bitmap;
 static GBitmap *s_bottom_bitmap;
@@ -85,8 +87,13 @@ static void update_battery(BatteryChargeState charge){
 	// Show charging
 	if(charge.is_charging) {
 		layer_set_hidden(bitmap_layer_get_layer(s_charging_layer), false);
+		layer_set_hidden(text_layer_get_layer(s_charged_layer), true);
+	} else if(charge.is_plugged && charge.charge_percent == 100) {
+		layer_set_hidden(bitmap_layer_get_layer(s_charging_layer), true);
+		layer_set_hidden(text_layer_get_layer(s_charged_layer), false);
 	} else {
 		layer_set_hidden(bitmap_layer_get_layer(s_charging_layer), true);
+		layer_set_hidden(text_layer_get_layer(s_charged_layer), true);
 	}
 }
 
@@ -99,6 +106,7 @@ static void main_window_load(Window *window) {
 	s_time_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_PLAY_FONT_REGULAR_35));
 	s_date_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_PLAY_FONT_BOLD_20));
 	s_day_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_PLAY_FONT_REGULAR_16));
+	s_charged_font = fonts_load_custom_font(resource_get_handle(RESOURCE_ID_PLAY_FONT_REGULAR_14));
 
 
 	// BATTERY BAR
@@ -121,6 +129,17 @@ static void main_window_load(Window *window) {
 	bitmap_layer_set_compositing_mode(s_charging_layer, GCompOpOr);
 	layer_add_child(window_get_root_layer(window), bitmap_layer_get_layer(s_charging_layer));
 	layer_set_hidden(bitmap_layer_get_layer(s_charging_layer), true);
+	
+	
+	// CHARGED
+	s_charged_layer = text_layer_create(GRect(0, 50, 144, 26));
+	text_layer_set_background_color(s_charged_layer, GColorClear);
+	text_layer_set_text_color(s_charged_layer, GColorWhite);
+	text_layer_set_font(s_charged_layer, s_charged_font);
+	text_layer_set_text_alignment(s_charged_layer, GTextAlignmentCenter);
+	text_layer_set_text(s_charged_layer, "Charged");
+	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_charged_layer));
+	layer_set_hidden(text_layer_get_layer(s_charged_layer), true);
 	
 	
 	// BOTTOM BAR
@@ -177,6 +196,7 @@ static void main_window_unload(Window *window) {
     text_layer_destroy(s_time_layer);
 	text_layer_destroy(s_date_layer);
 	text_layer_destroy(s_day_layer);
+	text_layer_destroy(s_charged_layer);
   
     // Unload GFont
     fonts_unload_custom_font(s_time_font);
