@@ -15,8 +15,24 @@
     "media": [
 		{
 			"type":"png",
-			"name":"MAIN_WATCHFACE",
-			"file":"img/watchface.png"
+			"name":"BATTERY_BAR",
+			"file":"img/batteryBar.png"
+		},
+		{
+			"type":"png",
+			"name":"CHARGING",
+			"file":"img/charging.png"
+		},
+		{
+			"type":"png",
+			"name":"BATTERY_MASK",
+			"file":"img/batteryMask.png"
+		
+		},
+		{
+			"type":"png",
+			"name":"BOTTOM_BAR",
+			"file":"img/bottomBar.png"
 		},
 		{
 			"type":"font",
