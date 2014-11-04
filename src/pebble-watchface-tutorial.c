@@ -129,6 +129,8 @@ static void main_window_unload(Window *window) {
   
     // Unload GFont
     fonts_unload_custom_font(s_time_font);
+	fonts_unload_custom_font(s_date_font);
+	fonts_unload_custom_font(s_day_font);
     
     // Destroy GBitmap and BitmapLayer
     gbitmap_destroy(s_background_bitmap);
