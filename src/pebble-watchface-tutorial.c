@@ -72,6 +72,9 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 
 static void update_battery(BatteryChargeState charge){
 	
+	static char charge_now[0x100];
+	snprintf(charge_now, sizeof(charge_now), "%d%%", charge.charge_percent);
+	
 	// Battery charge
 	// 100% = 0 deg = 0; 0% = 123 deg = 0.34
 	bat_angle = TRIG_MAX_ANGLE * (charge.charge_percent-100) * 0.34 / 100 ;
@@ -90,10 +93,12 @@ static void update_battery(BatteryChargeState charge){
 		layer_set_hidden(text_layer_get_layer(s_charged_layer), true);
 	} else if(charge.is_plugged && charge.charge_percent == 100) {
 		layer_set_hidden(bitmap_layer_get_layer(s_charging_layer), true);
+		text_layer_set_text(s_charged_layer, "Charged");
 		layer_set_hidden(text_layer_get_layer(s_charged_layer), false);
 	} else {
 		layer_set_hidden(bitmap_layer_get_layer(s_charging_layer), true);
-		layer_set_hidden(text_layer_get_layer(s_charged_layer), true);
+		text_layer_set_text(s_charged_layer, charge_now);
+		layer_set_hidden(text_layer_get_layer(s_charged_layer), false);
 	}
 }
 
@@ -137,9 +142,9 @@ static void main_window_load(Window *window) {
 	text_layer_set_text_color(s_charged_layer, GColorWhite);
 	text_layer_set_font(s_charged_layer, s_charged_font);
 	text_layer_set_text_alignment(s_charged_layer, GTextAlignmentCenter);
-	text_layer_set_text(s_charged_layer, "Charged");
+	//text_layer_set_text(s_charged_layer, "");
 	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_charged_layer));
-	layer_set_hidden(text_layer_get_layer(s_charged_layer), true);
+	//layer_set_hidden(text_layer_get_layer(s_charged_layer), true);
 	
 	
 	// BOTTOM BAR
