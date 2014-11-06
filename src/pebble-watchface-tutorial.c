@@ -13,6 +13,7 @@ static BitmapLayer *s_bottom_layer;
 static RotBitmapLayer *s_seconds_layer;
 static BitmapLayer *s_charging_layer;
 static TextLayer *s_charged_layer;
+static TextLayer *s_temp_layer;
 static GBitmap *s_battery_bitmap;
 static GBitmap *s_battery_mask_bitmap;
 static GBitmap *s_bottom_bitmap;
@@ -183,6 +184,16 @@ static void main_window_load(Window *window) {
 	text_layer_set_text_alignment(s_date_layer, GTextAlignmentCenter);
 	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_date_layer));
 
+	// TEMPERATURE TEXT
+	s_temp_layer = text_layer_create(GRect(0, 100, 144, 26));
+	text_layer_set_background_color(s_temp_layer, GColorClear);
+	text_layer_set_text_color(s_temp_layer, GColorWhite);
+	text_layer_set_font(s_temp_layer, s_charged_font);
+	text_layer_set_text_alignment(s_temp_layer, GTextAlignmentCenter);
+	text_layer_set_text(s_temp_layer, "-3 C");
+	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_temp_layer));
+	
+	
 	// DAY TEXT
 	s_day_layer = text_layer_create(GRect(0, 0, 144, 26));
 	text_layer_set_background_color(s_day_layer, GColorClear);
@@ -202,11 +213,13 @@ static void main_window_unload(Window *window) {
 	text_layer_destroy(s_date_layer);
 	text_layer_destroy(s_day_layer);
 	text_layer_destroy(s_charged_layer);
+	text_layer_destroy(s_temp_layer);
   
     // Unload GFont
     fonts_unload_custom_font(s_time_font);
 	fonts_unload_custom_font(s_date_font);
 	fonts_unload_custom_font(s_day_font);
+	fonts_unload_custom_font(s_charged_font);
     
     // Destroy GBitmap and BitmapLayer
     gbitmap_destroy(s_battery_bitmap);
