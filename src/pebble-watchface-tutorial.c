@@ -71,6 +71,18 @@ static void tick_handler(struct tm *tick_time, TimeUnits units_changed) {
 	update_time();
 }
 
+static void update_bluetooth(bool connected){
+	if(connected){
+		text_layer_set_text(s_temp_layer,"C");
+	}else{
+		text_layer_set_text(s_temp_layer, "x");
+	}
+}
+
+static void bluetooth_connection_handler(bool connected){
+	update_bluetooth(connected);
+}
+
 static void update_battery(BatteryChargeState charge){
 	
 	static char charge_now[0x100];
@@ -190,7 +202,7 @@ static void main_window_load(Window *window) {
 	text_layer_set_text_color(s_temp_layer, GColorWhite);
 	text_layer_set_font(s_temp_layer, s_charged_font);
 	text_layer_set_text_alignment(s_temp_layer, GTextAlignmentCenter);
-	text_layer_set_text(s_temp_layer, "-3 C");
+	//text_layer_set_text(s_temp_layer, "x");
 	layer_add_child(window_get_root_layer(window), text_layer_get_layer(s_temp_layer));
 	
 	
@@ -205,6 +217,7 @@ static void main_window_load(Window *window) {
 	// Make sure the time is displayed from the start
 	update_time();
 	update_battery(battery_state_service_peek());
+	update_bluetooth(bluetooth_connection_service_peek());
 }
 
 static void main_window_unload(Window *window) {
@@ -255,6 +268,9 @@ static void init() {
 
 	// Register with BatteryStateService
 	battery_state_service_subscribe(battery_state);
+	
+	// Register with BluetoothConnectionService
+	bluetooth_connection_service_subscribe(bluetooth_connection_handler);
 }
 
 static void deinit() {
