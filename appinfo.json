@@ -1,69 +1,19 @@
 {
   "appKeys": {
-    "KEY_TEMPERATURE":  0,
-    "KEY_CONDITIONS": 1
+    "dummy":  0
   },
-  "uuid": "6bfd98b7-a919-420b-87ef-302283b64307",
-  "shortName": "Demo",
-  "longName": "Demo",
+  "uuid": "6bfd98b7-a919-420b-87ef-302283b64305",
+  "shortName": "Demo2",
+  "longName": "Demo2",
   "companyName": "Gopinath Danda",
   "versionCode": 1,
   "versionLabel": "1.0",
   "projectType":"native",
-  "capabilities":[ 
-	 "location" 
-  ],
   "watchapp": {
     "watchface": true
   },
   "resources": {
-    "media": [
-		{
-			"type":"png",
-			"name":"BATTERY_BAR",
-			"file":"img/batteryBar.png"
-		},
-		{
-			"type":"png",
-			"name":"CHARGING",
-			"file":"img/charging.png"
-		},
-		{
-			"type":"png",
-			"name":"BATTERY_MASK",
-			"file":"img/batteryMask.png"
-		
-		},
-		{
-			"type":"png",
-			"name":"BOTTOM_BAR",
-			"file":"img/bottomBar.png"
-		},
-		{
-			"type":"font",
-			"name":"PLAY_FONT_REGULAR_35",
-			"file":"fonts/Play-Regular.ttf"
-		},
-		{
-			"type":"font",
-			"name":"PLAY_FONT_REGULAR_16",
-			"file":"fonts/Play-Regular.ttf"
-		},
-		{
-			"type":"font",
-			"name":"PLAY_FONT_REGULAR_14",
-			"file":"fonts/Play-Regular.ttf"
-		},
-		{
-			"type":"font",
-			"name":"PLAY_FONT_BOLD_20",
-			"file":"fonts/Play-Bold.ttf"
-		},
-		{
-			"type":"png",
-			"name":"SECONDS_DIAL",
-			"file":"img/seconds.png"
-		}
+	"media":[
 	]
   }
 }
