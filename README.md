@@ -1,3 +1,3 @@
-# Posture Correction Alert System using Flex Sensors and Pebble
+# Posture Correction Alert System
 
-A posture detection and correction alert system for Pebble users.
+A posture detection and correction alert system using Flex sensors for Pebble users.
