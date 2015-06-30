@@ -1,0 +1,27 @@
+{
+  "appKeys": {
+    "KEY_TEMPERATURE":  0,
+    "KEY_CONDITIONS": 1
+  },
+  "uuid": "6bfd98b7-a919-420b-87ef-302283b64306",
+  "shortName": "Demo",
+  "longName": "Demo",
+  "companyName": "Gopinath Danda",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "projectType":"native",
+  "capabilities":[ 
+	 "location" 
+  ],
+  "watchapp": {
+    "watchface": true
+  },
+  "resources": {
+	"media":[	{
+			"type":"png",
+			"name":"SECONDS_DIAL",
+			"file":"img/seconds.png"
+		}
+	]
+  }
+}
