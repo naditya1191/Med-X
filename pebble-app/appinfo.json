@@ -1,0 +1,19 @@
+{
+  "appKeys": {
+    "dummy":  0
+  },
+  "uuid": "6bfd98b7-a919-420b-87ef-302283b64305",
+  "shortName": "Demo2",
+  "longName": "Demo2",
+  "companyName": "Gopinath Danda",
+  "versionCode": 1,
+  "versionLabel": "1.0",
+  "projectType":"native",
+  "watchapp": {
+    "watchface": true
+  },
+  "resources": {
+	"media":[
+	]
+  }
+}
